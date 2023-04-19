@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.10 on win32)" generated="20230407 19:27:15.235" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot" source="C:\Users\user\OneDrive\Desktop\robot">
+<suite id="s1-s1" name="Test case" source="C:\Users\user\OneDrive\Desktop\robot\Test case">
+<suite id="s1-s1-s1" name="Testcase" source="C:\Users\user\OneDrive\Desktop\robot\Test case\testcase.robot">
+<test id="s1-s1-s1-t1" name="opening the browser" line="6">
+<kw name="get browser window" library="keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url2}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230407 19:27:19.355" level="INFO">Opening browser 'googlechrome' to base url 'https://www.flipkart.com'.</msg>
+<status status="PASS" starttime="20230407 19:27:19.345" endtime="20230407 19:27:48.625"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230407 19:27:48.625" endtime="20230407 19:27:48.831"/>
+</kw>
+<status status="PASS" starttime="20230407 19:27:19.343" endtime="20230407 19:27:48.833"/>
+</kw>
+<kw name="searching for cricket bat" library="keywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${searchbar}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230407 19:27:48.835" endtime="20230407 19:27:49.135"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230407 19:27:54.142" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230407 19:27:49.136" endtime="20230407 19:27:54.143"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${searchbar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230407 19:27:54.152" level="INFO">Clicking element 'xpath = //*[@type='text']'.</msg>
+<status status="PASS" starttime="20230407 19:27:54.144" endtime="20230407 19:27:54.988"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${searchbar}</arg>
+<arg>${searchbarinput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230407 19:27:54.991" level="FAIL">Variable '${searchbarinput}' not found.</msg>
+<status status="FAIL" starttime="20230407 19:27:54.989" endtime="20230407 19:27:54.991"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${searchbar}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20230407 19:27:54.991" endtime="20230407 19:27:54.991"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>searching for cricket bat</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230407 19:27:54.991" endtime="20230407 19:27:54.998"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="NOT RUN" starttime="20230407 19:27:54.999" endtime="20230407 19:27:55.000"/>
+</kw>
+<status status="FAIL" starttime="20230407 19:27:48.835" endtime="20230407 19:27:55.001"/>
+</kw>
+<status status="FAIL" starttime="20230407 19:27:19.339" endtime="20230407 19:27:55.002">Variable '${searchbarinput}' not found.</status>
+</test>
+<status status="FAIL" starttime="20230407 19:27:15.416" endtime="20230407 19:27:55.016"/>
+</suite>
+<status status="FAIL" starttime="20230407 19:27:15.405" endtime="20230407 19:27:55.022"/>
+</suite>
+<status status="FAIL" starttime="20230407 19:27:15.274" endtime="20230407 19:27:55.032"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robot">Robot</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test case">Robot.Test case</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Testcase">Robot.Test case.Testcase</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230407 19:27:15.435" level="ERROR">Error in file 'C:\Users\user\OneDrive\Desktop\robot\Resource\locators.robot' on line 19: Setting variable '${searchbarinput} = xpath' failed: Invalid variable name '${searchbarinput} = xpath ='.</msg>
+</errors>
+</robot>
